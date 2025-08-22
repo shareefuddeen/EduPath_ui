@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import question from "../Icons/question_17235310.png"
 
 const faqs = [
   {
@@ -31,11 +32,19 @@ const FAQs = () => {
       >
         Frequently Asked Questions
       </motion.h2>
-      <div className="max-w-3xl mx-auto space-y-6">
-        {faqs.map((faq, index) => (
+      <div className="flex gap-6 p-6">
+        <div className="">
+          <img src={question} className="w-[20em] h-[20em]"/>
+        </div>
+ 
+        <div className="flex flex-col gap-4 my-auto">
+          <div className="relative top-[12em] flex items-center justify-center">
+              <div className="absolute z-0 w-[26em] h-[26em] rounded-full bg-purple-50 mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+            </div>
+          {faqs.map((faq, index) => (
           <motion.div
             key={index}
-            className="bg-white p-5 rounded-lg shadow"
+            className="ring-1 ring-gray-400 p-3  rounded-md shadow-md hover:shadow-xl transition flex flex-col gap-3"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -45,6 +54,7 @@ const FAQs = () => {
             <p className="text-sm text-gray-600">{faq.answer}</p>
           </motion.div>
         ))}
+        </div>
       </div>
     </section>
   );

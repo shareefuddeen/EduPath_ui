@@ -4,7 +4,7 @@ export default {
     extend: {
       animation: {
         upDown: "upDown 1s infinite",
-        blob: "blob 7s infinite",
+        blob: "blob 12s infinite",
       },
 
       keyframes: {
@@ -24,10 +24,10 @@ export default {
             transform: "translate(0px,0px) scale(1)",
           },
           "33%": {
-            transform: "translate(30px, -250px) scale(1.1)",
+            transform: "translate(30px, 40px) scale(1.1)",
           },
           "66%": {
-            transform: "translate(-250px,250px) scale(0.9)",
+            transform: "translate(40px,-50px) scale(0.9)",
           },
           "100%": {
             transform: "translate(0px,0px) scale(1)",
