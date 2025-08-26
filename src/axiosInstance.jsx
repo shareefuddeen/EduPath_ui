@@ -1,5 +1,6 @@
 import axios from "axios";
-const api_url = import.meta.env.VITE_API_URL
+
+const api_url = import.meta.env.VITE_API_URL;
 
 const axiosInstance = axios.create({
   baseURL: `${api_url}/`,
@@ -26,12 +27,9 @@ axiosInstance.interceptors.response.use(
 
       try {
         const refresh = localStorage.getItem("refresh");
-        const response = await axios.post(
-          "http://localhost:8000/token/refresh/",
-          {
-            refresh: refresh,
-          },
-        );
+        const response = await axios.post(`${api_url}/token/refresh/`, {
+          refresh,
+        });
 
         const newAccess = response.data.access;
         localStorage.setItem("access", newAccess);
@@ -42,7 +40,7 @@ axiosInstance.interceptors.response.use(
         console.error("Token refresh failed:", refreshError);
         localStorage.removeItem("access");
         localStorage.removeItem("refresh");
-        window.location.href = "/login";
+        window.location.href = "/login"; // adjust to your frontend route
         return Promise.reject(refreshError);
       }
     }

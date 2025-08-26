@@ -3,6 +3,9 @@ import LoginImage from "../Images/woman-holding-diploma-smiling.webp";
 import GoogleIcon from "../Icons/google-brands.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import logo from "../Images/5920-removebg-preview.webp"
+import GoogleLoginButton from "../Components/GoogleLoginButton"
+
 import axios from "axios";
 
 const Login = () => {
@@ -40,6 +43,7 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       console.log(error);
+      setIsloading(false)
       alert("invalid credentials");
     }
   };
@@ -52,11 +56,7 @@ const Login = () => {
   return (
     <section className="h-screen bg-gray-200 flex justify-center items-center">
      { isLoading?(
-          <div className="h-screen flex justify-center items-center">
-					<p className="text-purple-600 text-6xl font-mono font-bold animate-upDown">
-						Edu-Path
-					</p>
-				</div>
+          <img src={logo} className="w-12 h-12 animate-upDown mx-auto mt-[6em] flex justify-center items-center"/>
       ):(
         <div className="bg-white/50 w-[50em] h-[36em] overflow-hidden flex rounded-md">
         <img
@@ -111,7 +111,7 @@ const Login = () => {
            <div className="mt-2">
              <Link
               className="text-blue-600 hover:underline transition duration-300"
-              to="/register"
+              to="/reset-password"
             >
               reset password
             </Link>
@@ -128,17 +128,7 @@ const Login = () => {
           <div>
             <p className="text-center">or</p>
           </div>
-          <div className="bg-white p-2 rounded-full">
-            <a className="flex justify-center items-center gap-4" href="#">
-              <img
-                loading="lazy"
-                className="w-6 h-6"
-                src={GoogleIcon}
-                alt="Google logo"
-              />
-              Log in with Google
-            </a>
-          </div>
+          <GoogleLoginButton />
         </form>
       </div>
       )}

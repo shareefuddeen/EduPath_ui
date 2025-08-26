@@ -6,6 +6,7 @@ import teaching from '../Icons/medium-shot-smiley-woman-teaching.webp'
 import female from '../Icons/young-black-woman-painting-clay-pot-art-studio-craftswoman-painting-ceramic-bowl-workbench-girl-wearing-blue-apron.webp'
 import sofwareDeveloper from '../Icons/sofware-developer-thinking-while-touching-beard-while-typing-laptop-sitting-desk-with-multiple-screens-parsing-code-focused-database-admin-working-with-team-coding-background.webp'
 import housing from '../Icons/african-business-male-people-shaking-hands.webp'
+import logo from "../Images/5920-removebg-preview.webp"
 import { motion } from "framer-motion";
 
 const careers = [
@@ -21,8 +22,8 @@ const CareerPaths = () => {
 	return (
 		 <section className="p-12 bg-gray-200 font-serif z-10">
      <h2 className="text-[6em] text-center bg-gradient-to-r from-purple-800 to-gray-400 bg-clip-text text-transparent font-bold leading-tight">Discover Your Future</h2>
-     <div className='flex'>
-      <div className="grid grid-cols-3 grid-rows-3 gap-4 z-10 col-span-2 p-12 h-[600px] w-3/4">
+     <div className='flex lg:flex-row flex-col justify-center items-center'>
+      <div className="grid grid-cols-3 grid-rows-3 gap-4 z-10 lg:col-span-2 col-span-full p-2 lg:p-12 h-[600px] w-full lg:w-3/4">
         {careers.map((career, idx) => (
           <div
             key={idx}
@@ -40,13 +41,13 @@ const CareerPaths = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-center w-1/2 mb-4  p-6 space-y-4">
-        <p className="text-2xl tracking-wide leading-tighter">
+      <div className="flex flex-col justify-center text-center w-full lg:w-1/2 mb-4 p-2 lg:p-6 space-y-4">
+        <p className="text-2xl tracking-normal leading-tight">
           Explore a wide range of career paths tailored to your strengths and interests.
-          Whether you're creative, analytical, or hands-on, there's a path for you.
+          <br></br><br></br>Whether you're creative, analytical, or hands-on, there's a path for you.
         </p>
         <div className=''>
-        <Link to="/careers" className="text-center bg-gray-100 shadow-xl px-4 py-2 rounded text-xl hover:bg-gray-50 transition duration-300">
+        <Link to="/careers" className="text-center bg-black text-white shadow-xl px-4 py-2 rounded text-xl hover:bg-gray-50 hover:text-black transition duration-300">
           Explore Careers &rarr;
         </Link> 
       </div> 

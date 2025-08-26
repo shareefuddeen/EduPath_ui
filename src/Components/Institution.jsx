@@ -72,7 +72,7 @@ export const Institution = () => {
 
 				<Link
 					to="/program"
-					className="inline-block bg-gray-100 shadow-xl text-xl px-6 py-3 rounded-full text-sm hover:bg-gray-50 transition"
+					className="inline-block bg-black text-white hover:text-black shadow-xl text-xl px-6 py-3 rounded-full text-sm hover:bg-gray-50 transition"
 				>
 					Explore All Institutions &rarr;
 				</Link>

@@ -6,6 +6,8 @@ import Program from "./Pages/Program";
 import Career from "./Pages/Career";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Quiz from "./Pages/Quiz";
+import ResetPassword from "./Pages/reset_password";
+import ResetPasswordConfirm from "./Pages/Reset_password_confirm";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/program" element={<Program />}></Route>
           <Route path="/quiz" element={<Quiz/>}></Route>
           <Route path="/careers" element={<Career/>}></Route>
+          <Route path="/reset-password" element={<ResetPassword/>}></Route>
+          <Route path="/reset-password/:uidb64/:token" element={<ResetPasswordConfirm/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

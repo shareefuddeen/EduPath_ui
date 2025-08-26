@@ -2,6 +2,7 @@ import React from "react";
 import registerImage from "../Images/graduate-holding-diploma-celebrating-graduation.webp";
 import GoogleIcon from "../Icons/google-brands.svg";
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../Images/5920-removebg-preview.webp"
 import { useState } from "react";
 import axios from "axios";
 
@@ -52,6 +53,9 @@ const Register = () => {
                 console.log(error.message);
             }
         }
+        finally{
+            setIsLoading(false)
+        }
     };
 
     const handleSubmit = (e) => {
@@ -64,11 +68,7 @@ const Register = () => {
         <section className="h-screen bg-gray-200 flex justify-center items-center">
             {
                 isLoading ? (
-                    <div className="h-screen flex justify-center items-center">
-					<p className="text-purple-600 text-6xl font-mono font-bold animate-upDown">
-						Edu-Path
-					</p>
-				</div>
+<img src={logo} className="w-12 h-12 animate-upDown mx-auto mt-[6em] flex justify-center items-center"/>
                 ): (
                     <div className = "bg-white/50 w-[50em] h-[36em] overflow-hidden flex rounded-md">
                 <img

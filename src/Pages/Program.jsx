@@ -49,7 +49,7 @@ useEffect(()=>{
             className={`px-4 py-2 rounded-lg shadow-md transition flex justify-center items-center gap-2 ${
               selectedInstitution?.institution_name === inst.institution_name
                 ? "bg-gray-400 text-white"
-                : "bg-gray-200 hover:bg-gray-300"
+                : "bg-black text-white hover:shadow-lg transition"
             }`}
             onClick={() => setSelectedInstitution(inst)}
           >

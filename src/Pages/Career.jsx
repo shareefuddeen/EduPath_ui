@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios"
 import {useState,useEffect} from "react"
 import Navbar from "../Components/Navbar";
+import logo from "../Images/5920-removebg-preview.webp"
 import {motion} from "framer-motion"
 
 
@@ -33,7 +34,7 @@ export const Career = () => {
   	<>
   		<Navbar/>
   		{
-  			isLoading ? (<p className="animate-upDown text-4xl mt-[6em] flex justify-center items-center text-purple-900">Loading careers...</p>):(<div className="p-12 grid gap-6 grid-cols-4">
+  			isLoading ? (<img src={logo} className="w-12 h-12 animate-upDown mx-auto mt-[12em] flex justify-center items-center"/>):(<div className="p-12 grid gap-6 grid-cols-4">
   		  		
   		  		{
   		  			career.map((item,index)=>(

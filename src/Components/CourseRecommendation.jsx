@@ -43,24 +43,24 @@ const CourseRecommendation = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{once:true}}
-            className="text-6xl text-purple-900"
+            className="text-6xl text-center text-purple-900"
           >
             Courses Tailored to Your Career Goals
           </motion.h1>
         </div>
-        <div >
+        <div className="mx-2 text-center">
           <motion.h1
             initial={{ opacity: 0, scale: 0.6, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{once:true}}
-            className="text-2xl text-purple-900 mt-4"
+            className="text-2xl  text-center text-purple-900 mt-4"
           >
            
             Browse courses from top institutions aligned with your dream career.
           </motion.h1>
           <div className="text-center mt-4">
-            <Link to={path} className="inline px-4 py-2 bg-gray-100 rounded-full mx-auto text-center text-sm hover:bg-gray-50 shadow-md transition ">Get Started Now &rarr;</Link>
+            <Link to={path} className="inline px-4 py-2 bg-black text-white hover:text-black rounded-full mx-auto text-center text-sm hover:bg-gray-50 shadow-md transition ">Get Started Now &rarr;</Link>
           </div>
           
         </div>

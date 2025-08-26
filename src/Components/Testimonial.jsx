@@ -47,8 +47,7 @@ const cardVariants = {
 };
   return (
     <section className="py-20 flex flex-col items-center">
-      <p className="text-gray-500 text-sm mb-2">Rating & Reviews</p>
-      <h2 className="text-3xl font-bold mb-12 text-center">Trusted by people</h2>
+      <h2 className="text-6xl bg-gradient-to-r from-purple-800 to-gray-400 bg-clip-text text-transparent leading-tight  font-bold mb-12 text-center">Trusted by students</h2>
 
       <div className="relative flex justify-center p-12 items-center gap-1 flex-wrap">
         {testimonials.map((t, i) => (

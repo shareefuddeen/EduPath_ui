@@ -32,7 +32,7 @@ const FAQs = () => {
       >
         Frequently Asked Questions
       </motion.h2>
-      <div className="flex gap-6 p-6">
+      <div className="flex md:flex-row justify-center items-center flex-col gap-6 p-6">
         <div className="">
           <img src={question} className="w-[20em] h-[20em]"/>
         </div>
