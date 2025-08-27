@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 
@@ -47,7 +46,12 @@ const cardVariants = {
 };
   return (
     <section className="py-20 flex flex-col items-center">
-      <h2 className="text-6xl bg-gradient-to-r from-purple-800 to-gray-400 bg-clip-text text-transparent leading-tight  font-bold mb-12 text-center">Trusted by students</h2>
+      <motion.h2 
+       initial={{ opacity: 0, scale: 0.6, y: 20 }}
+					whileInView={{ opacity: 1, scale: 1, y: 0 }}
+					transition={{ duration: 0.6,ease:"easeIn" }}
+					viewport={{once:true}}
+      className="text-6xl bg-gradient-to-r from-purple-800 to-gray-400 bg-clip-text text-transparent leading-tight  font-bold mb-12 text-center">Trusted by students</motion.h2>
 
       <div className="relative flex justify-center p-12 items-center gap-1 flex-wrap">
         {testimonials.map((t, i) => (
@@ -56,7 +60,7 @@ const cardVariants = {
             className={`max-w-xs p-6 rounded-xl shadow-lg ${t.bg}`}
             variants={cardVariants}
             initial="hidden"
-            animate="show"
+            whileInView="show"
             custom={i}
           >
             <div className="flex mb-4 text-yellow-400">

@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -19,7 +18,7 @@ const Hero = () => {
 		return copyArr;
 	};
 
-	const heroes = [ <Hero3 />,<Hero1 />,<Hero2/>];
+	const heroes = [ <Hero3 />,<Hero2 />,<Hero1 />];
 
 	const Heroes = shuffleArray(heroes) 
 	return (

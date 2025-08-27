@@ -21,7 +21,7 @@ const Hero1 = () => {
                 viewport={{once:true}}
                 className="absolute z-40 top-[6em] right-2"
             >
-                <h1 className="text-6xl max-w-[16ch] text-white font-serif p-6">
+                <h1 className="lg:text-6xl text-2xl lg:max-w-[16ch] max-w-[25ch] text-white font-serif p-6">
                     Plan Your Future with Clarity and Confidence
                 </h1>
             </motion.div>
@@ -30,9 +30,9 @@ const Hero1 = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{once:true}}
-                className="absolute z-40 top-[18em] right-14"
+                className="absolute z-40 right-2 top-[11em] lg:top-[18em] lg:right-10"
             >
-                <p className="text-3xl text-white font-serif max-w-[30ch] p-6">
+                <p className="lg:text-3xl text-xl text-white font-serif max-w-[30ch] p-6">
                     EduPath helps you break down your career goals into
                     actionable steps. From choosing the right course to mapping
                     your long-term career plan.
@@ -43,16 +43,16 @@ const Hero1 = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{once:true}}
-                className="absolute z-40 text-gray-600 top-[30em] flex right-[8.9em] gap-4"
+                className="absolute z-40 text-gray-600 lg:top-[30em] flex right-8 lg:right-[8.9em] gap-4"
             >
                 <Link
-                    className="font-serif rounded shadow-lg hover:shadow-2xl hover:bg-black text-white transition duration-300 ring-1 ring-black px-2 py-1 text-xl font-serif"
+                    className="font-serif rounded shadow-lg hover:shadow-2xl hover:bg-black text-white transition duration-300 ring-1 ring-black px-2 py-1 text-sm lg:text-xl font-serif"
                     to={path}
                 >
                     Get Started
                 </Link>
                 <Link
-                    className="font-serif rounded bg-black hover:bg-black/60 shadow-lg text-white hover:shadow-2xl transition duration-300 cursor-pointer transition duration-300 px-6 py-1 text-xl font-serif"
+                    className="font-serif rounded bg-black hover:bg-black/60 shadow-lg text-white hover:shadow-2xl transition duration-300 cursor-pointer transition duration-300 px-6 py-1 text-sm lg:text-xl font-serif"
                     to="/programs"
                 >
                     Browse Available Programs

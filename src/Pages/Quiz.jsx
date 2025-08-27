@@ -53,6 +53,7 @@ const Quiz = () => {
           { answers: formattedAnswers }
         );
         setRecommendation(res.data.recommendation);
+        alert("Submitted!.Waittttt")
         setSubmitted(true);
       } catch (error) {
         console.error(error);
@@ -69,7 +70,8 @@ const Quiz = () => {
 
   if (submitted) {
     return (
-      <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-xl text-center">
+      <div className="min-w-screen mx-auto p-16 text-center">
+        <Navbar/>
         <h2 className="text-2xl font-bold text-green-600 mb-4">Recommendation</h2>
         <p className="text-lg">{recommendation}</p>
       </div>

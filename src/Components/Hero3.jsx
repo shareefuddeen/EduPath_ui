@@ -13,8 +13,8 @@ const Hero3 = () => {
         alt="hero image"
         className="object-cover w-full h-full relative"
       />
-      <div className="absolute z-40 top-0 flex flex-col justify-center items-center">
-        <h1 className="p-2 font-bold uppercase text-white text-[11em]">
+      <div className="absolute z-40 top-12 flex flex-col justify-center items-center">
+        <h1 className="p-2 font-bold uppercase text-white text-[7em] lg:text-[11em]">
           {word.map((letter, i) => (
             <motion.span
               initial={{ opacity: 0, scale: 0.6 }}
@@ -28,7 +28,7 @@ const Hero3 = () => {
           ))}
         </h1>
       </div>
-      <div className="absolute bottom-4 z-40 flex gap-[20em] justify-center items-center">
+      <div className="absolute md:bottom-4 z-40 flex gap-6 flex-col lg:flex-row lg:gap-[20em] justify-center items-center">
         <div className=""
         >
           <motion.h1
@@ -48,13 +48,13 @@ const Hero3 = () => {
          className="flex gap-4 z-40 "
         >
           <Link
-            className="font-serif rounded bg-black hover:bg-black/60 shadow-lg hover:shadow-2xl hover:bg-black transition duration-300 text-white px-2 py-1 text-xl font-serif"
+            className="font-serif rounded bg-black hover:bg-black/60 shadow-lg hover:shadow-2xl hover:bg-black transition duration-300 text-white px-2 py-1 text-md lg:text-xl font-serif"
             to="/program"
           >
             View courses
           </Link>
           <Link
-            className="font-serif rounded shadow-lg hover:bg-black hover:shadow-2xl transition duration-300 pointer transition duration-300 text-white ring-1 ring-black px-6 py-1 text-xl font-serif"
+            className="font-serif rounded shadow-lg hover:bg-black hover:shadow-2xl transition duration-300 pointer transition duration-300 text-white ring-1 ring-black px-2 lg:px-6 py-1 text-md lg:text-xl font-serif"
             to="/careers"
           >
             Career paths

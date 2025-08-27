@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-col lg:gap-2 md:gap-11 justify-center items-center gap-2">
               <p className="text-2xl max-w-[26ch]">Made with <span className="text-purple-900 font-bold">passion</span> in Ghana 🇬🇭.</p>
               <h1 className="text-2xl max-w-[16ch]">Guiding your future</h1>
-              <Link className="px-3 hover:bg-gray-50 hover:text-black py-2 md:h-10 md:w-26 bg-black rounded text-white w-[6.5em]" to="">Learn more</Link>
+              <Link className="px-3 hover:bg-gray-50 hover:text-black py-2 md:h-10 md:w-auto bg-black rounded text-white w-auto" to="">Learn more</Link>
             </div>
             <div className="mx-auto">
               <p>&copy; {new Date().getFullYear()} EduPath. All rights reserved </p>

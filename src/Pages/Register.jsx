@@ -1,4 +1,3 @@
-import React from "react";
 import registerImage from "../Images/graduate-holding-diploma-celebrating-graduation.webp";
 import GoogleIcon from "../Icons/google-brands.svg";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,7 +24,8 @@ const Register = () => {
             [name]: value,
         }));
     };
-
+    console.log(formData);
+    
     const Register = async () => {
         const headers = {
             "Content-Type": "application/json",
